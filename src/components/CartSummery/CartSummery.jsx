@@ -6,7 +6,7 @@ const CartSummery = ({ cart }) => {
   for (const product of cart) {
     totalPrice = totalPrice + product.price;
     totalShippingCharge = totalShippingCharge + product.shipping;
-    console.log(product);
+    // console.log(product);
   }
   const tax = totalPrice * 7 / 100;
   const grandTotal = totalPrice + totalShippingCharge + tax;
