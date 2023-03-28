@@ -10,22 +10,24 @@ const Product = (props) => {
 
   return (
     <div className="product border-2 border-primary m-2 rounded-md p-2 relative">
-      <img className="rounded-md" src={img ? img : "no image"} alt="no image" />
-      <div className="text-left mt-2">
-        <h5 className="">{name}</h5>
-        <h4>Price: ${price}</h4>
-      </div>
-      <div className="mt-4 text-left">
-        <h5>Manufacturer: {seller}</h5>
-        <p>Rating: {ratings} star</p>
+      <img className="rounded-md" src={img ? img : "image not found"} alt="" />
+      <div>
+        <div className="text-left mt-2 mb-12">
+          <h5>{name.substring(0,30)}</h5>
+          <h4>Price: ${price}</h4>
+          <h5>Manufacturer: {seller}</h5>
+          <p>Rating: {ratings} star</p>
+        </div>
+        {/* <div className="mt-4 text-left">
+          
+        </div> */}
       </div>
       <button
         onClick={() => handleAddToCart(props.product)}
-        className="btn-warning  w-full absolute mb-0"
+        className="btn-warning  w-full absolute bottom-0 left-0"
       >
         Add to Cart <FontAwesomeIcon icon={faShoppingCart} />
-      </button> 
-   
+      </button>
     </div>
   );
 };

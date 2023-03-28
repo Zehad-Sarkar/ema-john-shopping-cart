@@ -2,7 +2,8 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   daisyui: {
-    themes: [
+    
+  themes: [
       {
         mytheme: {
           primary: "#E779C1",
@@ -28,7 +29,7 @@ module.exports = {
           black: "#1a1a1a",
         },
       },
-    ],
+  ],
   },
   plugins: [require("daisyui")],
 };
