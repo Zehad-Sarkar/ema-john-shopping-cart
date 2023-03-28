@@ -10,17 +10,14 @@ const Product = (props) => {
 
   return (
     <div className="product border-2 border-primary m-2 rounded-md p-2 relative">
-      <img className="rounded-md" src={img ? img : "image not found"} alt="" />
+      <img className="rounded-md" src={img} alt="image not found" />
       <div>
         <div className="text-left mt-2 mb-12">
-          <h5>{name.substring(0,30)}</h5>
+          <h5>{name.substring(0, 30)}</h5>
           <h4>Price: ${price}</h4>
           <h5>Manufacturer: {seller}</h5>
           <p>Rating: {ratings} star</p>
         </div>
-        {/* <div className="mt-4 text-left">
-          
-        </div> */}
       </div>
       <button
         onClick={() => handleAddToCart(props.product)}
