@@ -1,34 +1,35 @@
 import React from 'react';
 import logo from '../../images/Logo.svg'
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <nav className="lg:flex lg:justify-between items-center">
       <img className="ml-24" src={logo} alt="" />
       <div className="nav-bar">
-        <a
+        <Link
           className="text-decoration-none md:ml-16 text-white font-bold"
-          href="/order"
+          to="/"
         >
-          Order
-        </a>
-        <a
+          Shop
+        </Link>
+        <Link
           className="text-decoration-none md:ml-16 text-white font-bold"
-          href="/review"
+          to="/review"
         >
           Order Review
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-decoration-none md:ml-16 text-white font-bold"
-          href="/inventory"
+          to="/inventory"
         >
           Manage Inventory
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-decoration-none md:ml-16 text-white font-bold mr-24"
-          href="/login"
+          to="/login"
         >
           Login
-        </a>
+        </Link>
       </div>
     </nav>
   );
